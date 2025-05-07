@@ -1,2 +1,5 @@
 # local venv
 hackaton-venv/
+
+# pycache
+__pycache__/
