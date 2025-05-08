@@ -18,5 +18,8 @@ def create_app(config_class='config.Config'):
     # Importa los modelos aquí
     from app.models import User, Professional
 
+    # Registrar blueprints
+    from app.main import main_bp
+    app.register_blueprint(main_bp)
 
     return app
