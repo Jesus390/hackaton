@@ -10,4 +10,8 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(128), nullable=False)
     role = db.Column(db.String(20), nullable=False, default='user')  # user, admin, professional
 
-    professional_profile = db.relationship('Professional', backref='user', uselist=False)
+    # professional_profile = db.relationship('Professional', backref='user', uselist=False)
+
+
+    # Relación uno a uno
+    professional_profile = db.relationship('Professional', back_populates='user', uselist=False)
