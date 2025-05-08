@@ -18,3 +18,6 @@ class User(UserMixin, db.Model):
 
     search_history = db.relationship('UserSearchHistory', back_populates='user', cascade='all, delete-orphan')
 
+    service_requests = db.relationship('ServiceRequest', back_populates='user', cascade='all, delete-orphan')
+
+

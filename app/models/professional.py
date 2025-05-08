@@ -16,3 +16,5 @@ class Professional(UserMixin, db.Model):
 
     # Relación reversa (opcional, si lo necesitas desde User)
     user = db.relationship('User', back_populates='professional_profile')
+
+    received_requests = db.relationship('ServiceRequest', back_populates='professional', cascade='all, delete-orphan')
