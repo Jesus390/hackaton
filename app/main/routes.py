@@ -28,12 +28,6 @@ def search():
     if query:
         results = Professional.query.filter(Professional.profession.ilike(f'%{query}%')).all()
 
-    return render_template('main/search_results.html', query=query, results=results)
-
-
-@main_bp.route('/search')
-def search():
-    query = request.args.get('q', '').strip()
     results = []
 
     if query:
@@ -45,3 +39,19 @@ def search():
             db.session.commit()
 
     return render_template('main/search_results.html', query=query, results=results)
+
+
+# @main_bp.route('/search')
+# def search():
+#     query = request.args.get('q', '').strip()
+#     results = []
+
+#     if query:
+#         results = Professional.query.filter(Professional.profession.ilike(f'%{query}%')).all()
+
+#         if current_user.is_authenticated:
+#             history = UserSearchHistory(user_id=current_user.id, search_term=query)
+#             db.session.add(history)
+#             db.session.commit()
+
+#     return render_template('main/search_results.html', query=query, results=results)
