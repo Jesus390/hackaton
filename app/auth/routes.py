@@ -14,7 +14,7 @@ def login():
         if user and check_password_hash(user.password, password):
             login_user(user)
             flash('Inicio de sesión exitoso.', 'success')
-            return redirect(url_for('main.index'))
+            return redirect(url_for('main.dashboard'))
         else:
             flash('Credenciales inválidas.', 'danger')
     return render_template('auth/login.html')
