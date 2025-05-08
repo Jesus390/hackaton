@@ -3,3 +3,5 @@ hackaton-venv/
 
 # pycache
 __pycache__/
+
+instance/
