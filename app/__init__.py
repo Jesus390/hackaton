@@ -1,18 +1,22 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from config import Config
+from flask_login import LoginManager
 
 db = SQLAlchemy()
+login_manager = LoginManager()
 
-def create_app():
+def create_app(config_class='config.Config'):
     app = Flask(__name__)
-    app.config.from_object(Config)
+    app.config.from_object(config_class)
 
     db.init_app(app)
+    login_manager.init_app(app)
 
-    # Crear las tablas en la base de datos si no existen
     with app.app_context():
         db.create_all()
 
-    # Puedes seguir registrando más blueprints, como main, etc.
+    # Importa los modelos aquí
+    from app.models import User, Professional
+
+
     return app
