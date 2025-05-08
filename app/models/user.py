@@ -15,3 +15,6 @@ class User(UserMixin, db.Model):
 
     # Relación uno a uno
     professional_profile = db.relationship('Professional', back_populates='user', uselist=False)
+
+    search_history = db.relationship('UserSearchHistory', back_populates='user', cascade='all, delete-orphan')
+
