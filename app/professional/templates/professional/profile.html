@@ -1,0 +1,7 @@
+<h2>Perfil Profesional</h2>
+<form method="POST">
+    <input name="profession" placeholder="Profesión" value="{{ professional.profession if professional else '' }}">
+    <input name="location" placeholder="Ubicación" value="{{ professional.location if professional else '' }}">
+    <textarea name="bio" placeholder="Sobre ti">{{ professional.bio if professional else '' }}</textarea>
+    <button type="submit">Guardar</button>
+</form>
