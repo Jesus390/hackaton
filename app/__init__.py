@@ -18,10 +18,13 @@ def create_app(config_class='config.Config'):
         return User.query.get(int(user_id))
         
     # Registrar blueprints
-    from app.main import main_bp
     from app.auth import auth_bp
+    from app.main import main_bp
+    from app.professional import professional_bp
+
     
-    app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
+    app.register_blueprint(main_bp)
+    app.register_blueprint(professional_bp, url_prefix='/professional')
 
     return app
