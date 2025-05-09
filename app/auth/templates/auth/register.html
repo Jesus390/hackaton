@@ -1,12 +1,15 @@
-<nav>
+<!-- <nav>
     <ul>
         <li><a href="/">Inicio</a></li>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Registrarme</a></li>
     </ul>
-</nav>
+</nav> -->
+{% extends 'base.html' %}
 
+{% block title %}Registrarme{% endblock %}
 
+{% block content %}
 <h2>Registro</h2>
 <form method="POST">
     <input name="username" placeholder="Usuario" required>
@@ -19,3 +22,4 @@
     </select>
     <button type="submit">Registrarse</button>
 </form>
+{% endblock %}
