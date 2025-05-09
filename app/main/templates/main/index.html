@@ -1,32 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>ServiYa</title>
-</head>
-<body>
-    <header class="flex justify-between p-8 bg-red-50">
-        <div class="text-3xl">ServiYa</div>
-        <div>
-            <ul class="flex justify-between">
-                <li class="p-2 m-3 bg-black text-white rounded-lg">
-                    <a class="p-12" href="#">Unete como Profesional</a>
-                </li>
-                <li class="p-2 m-3">
-                    <a href="{{ url_for('auth.login') }}">Login</a>                
-                </li>
-                <li class="p-2 m-3">
-                    <a href="{{ url_for('auth.register') }}">Registro</a>
-                </li>
-            </ul>
-        </div>
-    </header> -->
-        <!-- <h1>Bienvenido a la aplicación</h1>
-        <p>Este es el inicio.</p>
-        <a href="{{ url_for('auth.login') }}">Login</a> |
-        <a href="{{ url_for('auth.register') }}">Registro</a> -->
+
 {% extends 'base.html' %}
     
 {% block title %}ServiYa{% endblock%}
@@ -37,8 +9,3 @@
         <input type="text" name="q" placeholder="Buscar por profesión" required>
     <button type="submit">Buscar</button>
 {% endblock %}
-
-
-<!-- </form>
-</body>
-</html> -->
