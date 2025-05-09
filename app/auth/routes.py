@@ -48,7 +48,9 @@ def register():
         )
         db.session.add(new_user)
         db.session.commit()
-        flash('Registro exitoso. Ahora puedes iniciar sesión.', 'success')
-        return redirect(url_for('auth.login'))
+
+        login_user(new_user)
+        flash('Inicio de sesión exitoso.', 'success')
+        return redirect(url_for('main.dashboard'))
 
     return render_template('auth/register.html')
