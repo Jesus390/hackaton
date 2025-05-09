@@ -1,10 +1,8 @@
-<nav>
-    <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Registrarme</a></li>
-    </ul>
-</nav>
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
 
 <h2>Iniciar Sesión</h2>
 <form method="POST">
@@ -12,3 +10,5 @@
     <input name="password" type="password" placeholder="Contraseña" required>
     <button type="submit">Entrar</button>
 </form>
+
+{% endblock %}
