@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -22,16 +22,23 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </header> -->
         <!-- <h1>Bienvenido a la aplicación</h1>
         <p>Este es el inicio.</p>
         <a href="{{ url_for('auth.login') }}">Login</a> |
         <a href="{{ url_for('auth.register') }}">Registro</a> -->
-    <hr>
+{% extends 'base.html' %}
     
+{% block title %}ServiYa{% endblock%}
+
+{% block content %}
+    <hr>
     <form method="GET" action="{{ url_for('main.search') }}">
         <input type="text" name="q" placeholder="Buscar por profesión" required>
     <button type="submit">Buscar</button>
-</form>
+{% endblock %}
+
+
+<!-- </form>
 </body>
-</html>
+</html> -->
