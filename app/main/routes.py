@@ -16,7 +16,7 @@ from app.models.service_request import ServiceRequest
 
 @main_bp.route('/')
 def index():
-    return render_template('main/index.html')
+    return render_template('main/index_.html')
 
 @main_bp.route('/dashboard')
 @login_required
